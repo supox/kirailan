@@ -1,0 +1,7 @@
+= bootstrap_form_for @approval do |f|
+  = f.text_field :name, label:'שם'
+  = f.number_field :guests, label:'מספר אורחים'
+  = f.text_field :comments, label:'הערות'
+  = recaptcha_tags
+  = f.submit "שלח", class: "btn btn-success"
+  

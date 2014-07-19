@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @hitchhike.name
+%p
+  %b Phone:
+  = @hitchhike.phone
+%p
+  %b From:
+  = @hitchhike.from
+%p
+  %b Hour:
+  = @hitchhike.hour
+%p
+  %b Comments:
+  = @hitchhike.comments
+%p
+  %b Taking:
+  = @hitchhike.taking
+
+= link_to 'Edit', edit_hitchhike_path(@hitchhike)
+\|
+= link_to 'Back', hitchhikes_path

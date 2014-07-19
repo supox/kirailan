@@ -1,0 +1,25 @@
+%h1 לוח טרמפים
+
+%table.table.table-striped
+  %tr
+    %th שם
+    %th טלפון/מייל
+    %th יוצא מישוב
+    %th שעה
+    %th הערות
+    %th לוקח / מצטרף
+    %th
+
+  - @hitchhikes.each do |hitchhike|
+    %tr
+      %td= hitchhike.name
+      %td= hitchhike.phone
+      %td= hitchhike.from
+      %td= hitchhike.hour
+      %td= hitchhike.comments
+      %td= hitchhike.taking ? 'לוקח' : 'מצטרף'
+      %td= link_to 'ערוך', edit_hitchhike_path(hitchhike)
+
+%br
+
+= button_to 'בקש / הצע טרמפ', new_hitchhike_path, class:"btn btn-primary", method: "get"

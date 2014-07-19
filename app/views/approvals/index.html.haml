@@ -1,0 +1,14 @@
+%h1 אישורי הגעה
+
+%table.table.table-striped
+  %tr
+    %th שם
+    %th מספר אורחים
+    %th הערות
+
+  - @approvals.each do |approval|
+    %tr
+      %td= approval.name
+      %td= approval.guests
+      %td= approval.comments
+

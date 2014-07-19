@@ -1,0 +1,60 @@
+%h1 הגלריה
+
+#slider1_container{style: "position: relative; top: 0px; left: 0px; width: 300px; height: 400px; background: #191919; overflow: hidden; direction:ltr;"}
+  / Loading Screen
+  %div{style: "position: absolute; top: 0px; left: 0px;", u: "loading"}
+    %div{style: "filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block; background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;"}
+    %div{style: "position: absolute; display: block; background: url(/gallery/loading.gif) no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;"}
+  / Slides Container
+  %div{style: "cursor: move; position: absolute; left: 0px; top: 0px; width: 300px; height: 400px; overflow: hidden;", u: "slides"}
+    - Dir[File.join(Rails.public_path, 'gallery', @folder, "*.jpg")].each do |f|
+      %div
+        %img{src: "/gallery/#{@folder}/#{File.basename(f)}", u: "image"}
+
+  / Bullet Navigator Skin Begin
+  :css
+    .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+        background: url(/gallery/b10.png) no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    .jssorb05 div {
+        background-position: -3px -3px;
+    }
+
+        .jssorb05 div:hover, .jssorb05 .av:hover {
+            background-position: -18px -3px;
+        }
+
+    .jssorb05 .av {
+        background-position: -33px -3px;
+    }
+
+    .jssorb05 .dn, .jssorb05 .dn:hover {
+        background-position: -48px -3px;
+    }
+  .jssorb05{style: "position: absolute; bottom: 8px; right: 3px;", u: "navigator"}
+    %div{style: "position: absolute; width: 8px; height: 8px;", u: "prototype"}
+
+  / Arrow Navigator Skin Begin
+  :css
+    .jssora05l, .jssora05r, .jssora05ldn, .jssora05rdn
+    {
+    	position: absolute;
+    	cursor: pointer;
+    	display: block;
+        background: url(/gallery/a17.png) no-repeat;
+        overflow:hidden;
+    }
+    .jssora05l { background-position: -10px -40px; }
+    .jssora05r { background-position: -70px -40px; }
+    .jssora05l:hover { background-position: -130px -40px; }
+    .jssora05r:hover { background-position: -190px -40px; }
+    .jssora05ldn { background-position: -250px -40px; }
+    .jssora05rdn { background-position: -310px -40px; }
+  / Arrow Left
+  %span.jssora05l{style: "width: 40px; height: 40px; top: 158px; left: 8px;", u: "arrowleft"}
+  / Arrow Right
+  %span.jssora05r{style: "width: 40px; height: 40px; top: 158px; right: 8px", u: "arrowright"}
+  / Arrow Navigator Skin End

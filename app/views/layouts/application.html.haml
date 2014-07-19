@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1, maximum-scale=1"}
+    %title= content_for?(:title) ? yield(:title) : "קירה ואילן מתחתנים"
+    %meta{:content => content_for?(:description) ? yield(:description) : "קירה ואילן מתחתנים", :name => "description"}
+    = stylesheet_link_tag :application, :media => "all"
+    = javascript_include_tag :application
+    = csrf_meta_tags
+    = yield(:head)
+  %body
+    %header
+      %nav.navbar.navbar-default.navbar-fixed-top{role: "navigation"}
+        .container
+          .navbar-header
+            %button.navbar-toggle{"data-target" => "#myNavigation", "data-toggle" => "collapse", type: "button"}
+              %i.fa.fa-bars
+            %a{href:'/'}
+              %img.navbar-logo.pull-right{alt: "", src: "/couple.png"}
+            %a.navbar-brand.animated.flipInX{href: "/"}
+              קירה ואילן
+          #myNavigation.collapse.navbar-collapse
+            %ul.nav.navbar-nav.navbar-right.animated.flipInX
+              %li
+                %a.brand{:href => "/"} החתונה
+              %li
+                %a.brand{:href => "/getting_there"} הוראות הגעה
+              %li
+                %a.brand{:href => "/approvals/new"} אישור הגעה
+              %li
+                %a.brand{:href => "/songs"} בקשות שירים
+              %li
+                %a.brand{:href => "/hitchhikes"} לוח טרמפים
+              %li
+                %a.brand{:href => "/hotels"} מקומות לינה
+              %li
+                %a.brand{:href => "/gallery"} הגלריה
+
+    #main{:role => "main"}
+      .container
+        .content
+          .row
+            .span12
+              = render 'layouts/messages'
+              = yield
+          %footer
+

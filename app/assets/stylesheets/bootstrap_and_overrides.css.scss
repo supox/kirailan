@@ -1,0 +1,30 @@
+@import "bootstrap";
+body {
+  padding-top: 60px;
+  direction:rtl;
+  background-color: #eee;
+}
+
+.content {
+  padding: 20px;
+}
+
+th {
+  text-align:right;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+  float: right;
+  margin-right: -20px;
+  margin-left: 0px;
+}
+
+.radio, .checkbox {
+  padding-left:0px;
+  padding-right:20px;
+}
+
+#recaptcha_widget_div {
+  direction:ltr;
+  width:320px;
+}

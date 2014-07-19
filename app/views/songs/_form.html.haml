@@ -1,0 +1,11 @@
+= bootstrap_form_for @song do |f|
+  = f.text_field :name, label:'שם השיר'
+  = f.text_field :artist, label:'מבצע'
+
+  = f.form_group :song_type do
+    - @song.song_type_names.each.with_index do |t,i|
+      = f.radio_button :song_type, i, label: t
+  
+  = recaptcha_tags
+  = f.submit "שלח", class: "btn btn-success"
+  

@@ -1,0 +1,22 @@
+%h1 רשימת שירים
+%p
+  בקשות לשירים - אתם מוזמנים לבקש את השיר האהוב עליכם.
+
+%table.table.table-striped
+  %tr
+    %th שם
+    %th מבצע
+    %th סוג השיר
+    %th
+
+  - @songs.each do |song|
+    %tr
+      %td
+        %strong= song.name
+      %td= song.artist
+      %td= song.human_song_type
+      %td= link_to 'ערוך', edit_song_path(song)
+
+%br
+
+= button_to 'בקש שיר', new_song_path, class:"btn btn-primary", method: :get

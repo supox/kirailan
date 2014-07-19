@@ -1,0 +1,13 @@
+= bootstrap_form_for @hitchhike do |f|
+  = f.text_field :name, label:'שם'
+  = f.text_field :phone, label:'טלפון / מייל'
+  = f.text_field :from, label:'יוצא מיישוב'
+  = f.text_field :hour, label:'שעת יציאה'
+  = f.text_field :comments, label:'הערות'
+  = f.form_group :taking do
+    = f.radio_button :taking, true, label: "מביא רכב"
+    = f.radio_button :taking, false, label: "מחפש טרמפ"
+
+  = recaptcha_tags
+
+  = f.submit "צור טרמפ", class: "btn btn-success"
