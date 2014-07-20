@@ -5,6 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : "קירה ואילן מתחתנים"
     %meta{:content => content_for?(:description) ? yield(:description) : "קירה ואילן מתחתנים", :name => "description"}
     %link{href:"//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css",rel:"stylesheet"}
+    %link{rel:"icon",href:"/favicon.gif",type:"image/gif"}
     
     = stylesheet_link_tag :application, :media => "all"
     = javascript_include_tag :application
