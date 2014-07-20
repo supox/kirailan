@@ -11,6 +11,9 @@ class StaticPagesController < ApplicationController
   def program
   end
 
+  def wedding
+  end
+
   def gallery
     @folder = 'propose'
   end
