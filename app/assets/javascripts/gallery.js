@@ -1,6 +1,6 @@
 
-$(document).ready(function () {
-
+var ready;
+ready = function() {
     var _SlideshowTransitions = [
     //Fly in L
         { $Duration: 800, $FlyDirection: 1 },
@@ -44,4 +44,9 @@ $(document).ready(function () {
     };
 
     var jssor_slider1 = new $JssorSlider$("slider1_container", options);
-});
+}
+
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
+
