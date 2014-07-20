@@ -113,6 +113,9 @@ th {
 .sign-btn {
   height: 50px;
   font-size: 14pt;
+  vertical-align:middle;
+  margin-top:20px;
+  display:table-cell;
   a {
     color:white;
   }
