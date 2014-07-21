@@ -1,6 +1,8 @@
 %h1 רשימת שירים
 %p
-  בקשות לשירים - אתם מוזמנים לבקש את השיר האהוב עליכם.
+  בקשות לשירים - אתם מוזמנים לבקש את השיר האהוב עליכם
+  %sup
+    %i.fa.fa-asterisk{style:"font-size:6px;"}
 
 %table.table.table-striped
   %tr
@@ -17,6 +19,12 @@
       %td= song.human_song_type
       %td= link_to 'ערוך', edit_song_path(song)
 
-%br
 
+%p.disclaimer
+  %sup
+    %i.fa.fa-asterisk{style:"font-size:6px;"}
+  המתקלט אינו מתחייב לרשימת השירים הנל
+
+%br
 = button_to 'בקש שיר', new_song_path, class:"btn btn-primary", method: :get
+
