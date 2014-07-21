@@ -16,7 +16,7 @@ class HitchhikesController < ApplicationController
     @hitchhike = Hitchhike.new(hitchhike_params)
 
     respond_to do |format|
-      if verify_recaptcha(:model => @hitchhike, :message => "Oh! It's error with reCAPTCHA!") && @hitchhike.save
+      if verify_recaptcha(:model => @hitchhike, :message => "טעות באימות המספרים") && @hitchhike.save
         format.html { redirect_to hitchhikes_url, notice: 'הטרמפ נוצר בהצלחה' }
         format.json { render :show, status: :created, location: @hitchhike }
       else
@@ -28,7 +28,7 @@ class HitchhikesController < ApplicationController
 
   def update
     respond_to do |format|
-      if verify_recaptcha(:model => @hitchhike, :message => "Oh! It's error with reCAPTCHA!") && @hitchhike.update(hitchhike_params)
+      if verify_recaptcha(:model => @hitchhike, :message => "טעות באימות המספרים") && @hitchhike.update(hitchhike_params)
         format.html { redirect_to hitchhikes_url, notice: 'הטרמפ עודכן בהצלחה' }
         format.json { render :show, status: :ok, location: @hitchhike }
       else

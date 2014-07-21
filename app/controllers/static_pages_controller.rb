@@ -17,4 +17,5 @@ class StaticPagesController < ApplicationController
   def gallery
     @folder = 'propose'
   end
+
 end

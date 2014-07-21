@@ -38,4 +38,5 @@ gem "auto_strip_attributes"
 gem "bootstrap_form"
 gem "therubyracer"
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'will_paginate-bootstrap'
 

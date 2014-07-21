@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wishes, except:[:show]
+
   resources :songs, except:[:show]
 
   resources :approvals, only:[:new, :create, :index]

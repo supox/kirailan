@@ -1,0 +1,7 @@
+= bootstrap_form_for @wish do |f|
+  = f.text_area :content, label:'הברכה'
+  = f.text_field :name, label:'שם'
+
+  = recaptcha_tags ajax:true
+
+  = f.submit "שלח ברכה", class: "btn btn-success"

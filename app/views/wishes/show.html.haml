@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @wish.content
+%p
+  %b Name:
+  = @wish.name
+
+= link_to 'Edit', edit_wish_path(@wish)
+\|
+= link_to 'Back', wishes_path

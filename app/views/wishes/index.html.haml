@@ -1,0 +1,18 @@
+%h1 ספר אורחים
+
+= will_paginate @wishes, renderer: BootstrapPagination::Rails
+
+-@wishes.each do |w|
+  .wish
+    =simple_format(w.content)
+    .from
+      מאת
+      = w.name
+      .edit
+        = link_to 'ערוך', edit_wish_path(w)
+
+= will_paginate @wishes, renderer: BootstrapPagination::Rails
+
+%br
+
+= button_to 'הוסף ברכה', new_wish_path, class:"btn btn-primary", method: "get"
