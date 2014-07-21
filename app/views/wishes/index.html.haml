@@ -7,7 +7,8 @@
     =simple_format(w.content)
     .from
       מאת
-      = w.name
+      = w.name 
+      %span{dir:'rlt', float:'left'}= "(" + w.created_at.strftime("%d-%m") + ")"
       .edit
         = link_to 'ערוך', edit_wish_path(w)
 

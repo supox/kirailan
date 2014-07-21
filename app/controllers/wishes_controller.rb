@@ -2,7 +2,7 @@ class WishesController < ApplicationController
   before_action :set_wish, only: [:show, :edit, :update, :destroy]
 
   def index
-    @wishes = Wish.paginate(:page => params[:page])
+    @wishes = Wish.paginate(:page => params[:page]).order("created_at DESC")
   end
 
   def show
