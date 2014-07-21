@@ -8,6 +8,6 @@
     = f.radio_button :taking, true, label: "מביא רכב"
     = f.radio_button :taking, false, label: "מחפש טרמפ"
 
-  = recaptcha_tags
+  = recaptcha_tags ajax:true
 
   = f.submit "צור טרמפ", class: "btn btn-success"

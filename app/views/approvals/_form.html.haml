@@ -2,6 +2,6 @@
   = f.text_field :name, label:'שם'
   = f.number_field :guests, label:'מספר אורחים'
   = f.text_field :comments, label:'הערות'
-  = recaptcha_tags
+  = recaptcha_tags ajax:true
   = f.submit "שלח", class: "btn btn-success"
   
