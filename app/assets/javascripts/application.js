@@ -14,3 +14,6 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
+//= require ./jssor.core
+//= require ./jssor.slider
+//= require ./jssor.utils

@@ -5,6 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : "קירה ואילן מתחתנים"
     %meta{:content => content_for?(:description) ? yield(:description) : "קירה ואילן מתחתנים", :name => "description"}
     %link{href:"//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css",rel:"stylesheet"}
+    %link{rel:"stylesheet", href:"http://fonts.googleapis.com/css?family=Open+Sans%3A400italic%2C600italic%2C700italic%2C400%2C300%2C600%2C700&amp;subset=latin%2Ccyrillic-ext%2Ccyrillic%2Cgreek-ext%2Cgreek%2Cvietnamese%2Clatin-ext&amp;ver=1", type:"text/css", media:"all"}
     %link{rel:"icon",href:"/favicon.gif",type:"image/gif"}
     
     = stylesheet_link_tag :application, :media => "all"
