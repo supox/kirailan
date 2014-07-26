@@ -1,4 +1,6 @@
 class Song < ActiveRecord::Base
+  self.per_page = 20
+
   auto_strip_attributes :name, :nullify => false
   auto_strip_attributes :artist, :nullify => false
   validates :name, presence: true, allow_blank: false 

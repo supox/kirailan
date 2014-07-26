@@ -4,6 +4,8 @@
   %sup
     %i.fa.fa-asterisk{style:"font-size:6px;"}
 
+= will_paginate @songs, renderer: BootstrapPagination::Rails
+
 %table.table.table-striped
   %tr
     %th שם
@@ -20,9 +22,9 @@
       %td= link_to 'ערוך', edit_song_path(song)
 
 
-%p.disclaimer
+%p#disclaimer
   %sup
-    %i.fa.fa-asterisk{style:"font-size:6px;"}
+    %i.fa.fa-asterisk
   המתקלט אינו מתחייב לרשימת השירים הנל
 
 %br

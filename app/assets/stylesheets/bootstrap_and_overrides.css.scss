@@ -119,8 +119,11 @@ th {
   }
 }
 
-.disclaimer {
+#disclaimer {
   font-size:11px;
+  sup {
+    font-size:6px;
+  }
 }
 
 .wish {
