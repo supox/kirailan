@@ -1,5 +1,8 @@
 %h1 אישורי הגעה
 
+%p
+  =button_to 'CSV', approvals_path(format: "csv"), class:"btn btn-primary", method: :get
+
 %table.table.table-striped
   %tr
     %th שם
