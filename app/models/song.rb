@@ -16,6 +16,15 @@ class Song < ActiveRecord::Base
 
   after_initialize :default_values
 
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << ['שם', 'מבצע', 'סוג']
+      all.each do |song|
+        csv << [song.name, song.artist, song.human_song_type]
+      end
+    end
+  end
+
   private
     def default_values
       self.song_type ||= 0
