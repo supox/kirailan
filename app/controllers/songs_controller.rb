@@ -2,7 +2,12 @@ class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
   def index
-    @songs = Song.paginate(:page => params[:page]).order("created_at DESC")
+    respond_to do |format| 
+      format.html {
+        @songs = Song.paginate(:page => params[:page]).order("created_at DESC")
+      }
+      format.csv { send_data Song.all.to_csv }
+    end
   end
 
   def new

@@ -4,6 +4,9 @@
   %sup
     %i.fa.fa-asterisk{style:"font-size:6px;"}
 
+= button_to 'בקש שיר', new_song_path, class:"btn btn-primary", method: :get
+%br
+
 = will_paginate @songs, renderer: BootstrapPagination::Rails
 
 %table.table.table-striped
@@ -27,6 +30,6 @@
     %i.fa.fa-asterisk
   המתקלט אינו מתחייב לרשימת השירים הנל
 
-%br
-= button_to 'בקש שיר', new_song_path, class:"btn btn-primary", method: :get
-
+%ul.list-inline{style:"padding-right:0px;"}
+  %li= button_to 'בקש שיר', new_song_path, class:"btn btn-primary", method: :get
+  %li= button_to 'CSV', songs_path(format: "csv"), class:"btn btn-primary", method: :get
