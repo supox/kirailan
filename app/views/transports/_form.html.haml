@@ -1,0 +1,12 @@
+= bootstrap_form_for @transport do |f|
+  = f.text_field :name, label:'שם'
+  = f.text_field :phone, label:'טלפון'
+  = f.text_field :comments, label:'הערות'
+
+  = f.form_group :song_type do
+    - @transport.direction_names.each.with_index do |t,i|
+      = f.radio_button :direction, i, label: t
+  
+  = recaptcha_tags
+  = f.submit "שלח", class: "btn btn-success"
+  
