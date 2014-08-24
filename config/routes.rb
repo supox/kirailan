@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :transports, except:[:show]
+
   resources :wishes, except:[:show]
 
   resources :songs, except:[:show]
