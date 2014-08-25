@@ -3,7 +3,7 @@
   ההסעה מהמרכז תצא <strong>בשעה חמש</strong> מרידינג בתל אביב למעלה גמלא ותחזור בחזרה בלילה.<br/>
   לפרטים נוספים ולכל שאלה ניתן לדבר עם עמית: 054-5459456.
 %p
-  על מנת שנוכל לארגן את ההזמנה, אנא הרשמו בהקדם:
+  על מנת שנוכל לארגן את ההזמנה, אנא הרשמו עד יום שלישי ה2/9:
 
 = button_to 'הרשמה להסעה', new_transport_path, class:"btn btn-primary", method: :get
 %br
@@ -27,5 +27,5 @@
 
 
 %ul.list-inline{style:"padding-right:0px;"}
-  %li= button_to 'הרשמה להסעה', new_transport_path, class:"btn btn-primary", method: :get
+  -# %li= button_to 'הרשמה להסעה', new_transport_path, class:"btn btn-primary", method: :get
   %li= button_to 'CSV', transports_path(format: "csv"), class:"btn btn-primary", method: :get
