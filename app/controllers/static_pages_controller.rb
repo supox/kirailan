@@ -16,10 +16,10 @@ class StaticPagesController < ApplicationController
 
   def gallery
     case params[:id]
-    when 'hupa'
+    when 'hupa', 'propose'
       @folder = params[:id]
     else
-      @folder = 'propose'
+     @folder = 'hupa'
     end
   end
 end
