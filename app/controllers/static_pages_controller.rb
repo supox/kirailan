@@ -15,7 +15,11 @@ class StaticPagesController < ApplicationController
   end
 
   def gallery
-    @folder = 'propose'
+    case params[:id]
+    when 'hupa'
+      @folder = params[:id]
+    else
+      @folder = 'propose'
+    end
   end
-
 end

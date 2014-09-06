@@ -59,3 +59,17 @@
   %span.jssora05r{style: "width: 40px; height: 40px; top: 250px; right: 8px", u: "arrowright"}
   / Arrow Navigator Skin End
   = javascript_include_tag 'gallery'
+
+%br
+
+#thumb.row
+  :css
+    h3 {text-align:center;}
+    .thumbnail {background-color: #c9c9c9; padding-top:10px;  }
+  -{hupa:'חופה', propose:'הזוג'}.each do |key, value|
+    .col-sm-6.col-md-3
+      %a.thumbnail{:href => "/gallery/#{key}"}
+        %img{:alt => value, :src => "/gallery/thumbs/#{key}.jpg"}
+        .caption
+          %h3= value
+ 

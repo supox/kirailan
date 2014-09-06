@@ -14,7 +14,10 @@ Rails.application.routes.draw do
   get 'hotels' => 'static_pages#hotels'
   get 'getting_there' => 'static_pages#getting_there'
   get 'program' => 'static_pages#program'
+
+  get 'gallery/:id' => 'static_pages#gallery'
   get 'gallery' => 'static_pages#gallery'
+
   get 'wedding' => 'static_pages#wedding'
   
   # The priority is based upon order of creation: first created -> highest priority.
