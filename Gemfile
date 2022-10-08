@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+ruby '~> 3.1.2'
 gem 'rails', '>= 4.1.4'
 
 group :development do
@@ -19,8 +19,6 @@ gem 'twitter-bootstrap-rails', :git => 'https://github.com/seyhunak/twitter-boot
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -34,7 +32,9 @@ gem 'haml-rails'
 gem 'will_paginate' 
 gem "auto_strip_attributes"
 gem "bootstrap_form"
-gem "therubyracer"
+gem 'libv8'
+gem 'therubyracer'
+
 # gem "recaptcha", :require => "recaptcha/rails"
 gem 'will_paginate-bootstrap'
-gem 'rails-i18n', '~> 4.0' # For 4.0.x
+gem 'rails-i18n', '~> 4.0'
