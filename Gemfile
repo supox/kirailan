@@ -5,12 +5,18 @@ gem 'rails', '>= 4.1.4'
 
 group :development do
   gem 'sqlite3'
+  gem 'webrick'
 end
 
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
+
+group :asset do
+  # gem 'therubyracer'
+end
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -33,8 +39,6 @@ gem 'will_paginate'
 gem "auto_strip_attributes"
 gem "bootstrap_form"
 gem 'libv8'
-gem 'therubyracer'
 
 # gem "recaptcha", :require => "recaptcha/rails"
 gem 'will_paginate-bootstrap'
-gem 'rails-i18n', '~> 4.0'
