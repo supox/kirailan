@@ -1,4 +1,4 @@
-class CreateWishes < ActiveRecord::Migration
+class CreateWishes < ActiveRecord::Migration[4.2]
   def change
     create_table :wishes do |t|
       t.string :content
